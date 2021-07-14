@@ -15,3 +15,5 @@ const input2 = [
 ]
 
 auction(input2).then(result => console.log(result))
+
+module.exports = auction

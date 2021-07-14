@@ -22,3 +22,5 @@ const input2 = [
 
 pushAsync(input1).then(result => console.log(result))
 pushAsync(input2).then(result => console.log(result))
+
+module.exports = pushAsync

@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "*",
+    "babel-jest": "*",
+    "@babel/preset-env": "*",
+    "jest": "^27.0.6"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -10,7 +16,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.0.6",
     "node-fetch": "^2.6.1"
   }
 }

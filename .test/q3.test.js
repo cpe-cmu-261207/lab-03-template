@@ -1,8 +1,5 @@
-const asyncRacer = async (cars) => {
-	/* Your code here */
-}
+const func = require('../q3')
 
-//test cases
 const input1 = [
 	() => {
 		return new Promise((resolve, reject) => setTimeout(() => resolve('Ford'), 1000))
@@ -11,6 +8,7 @@ const input1 = [
 		return new Promise((resolve, reject) => setTimeout(() => resolve('Ferrari'), 2000))
 	}
 ]
+const output1 = 'Ford'
 
 const input2 = [
 	() => {
@@ -23,8 +21,29 @@ const input2 = [
 		return new Promise((resolve, reject) => setTimeout(() => resolve('Yamaha'), 0))
 	},
 ]
+const output2 = 'Yamaha'
 
-asyncRacer(input1).then(data => console.log(data))
-asyncRacer(input2).then(data => console.log(data))
+const input3 = [
+	async () => {
+		return 'the flash'
+	},
+]
+const output3 = 'the flash'
 
-module.exports = asyncRacer
+test('q3 case 1', () => {
+	return func(input1).then(result =>{
+		expect(result).toEqual(output1)
+	})
+})
+
+test('q3 case 2', () => {
+	return func(input2).then(result =>{
+		expect(result).toEqual(output2)
+	})
+})
+
+test('q3 case 3', () => {
+	return func(input3).then(result =>{
+		expect(result).toEqual(output3)
+	})
+})
